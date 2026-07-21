@@ -1,0 +1,29 @@
+[
+  {
+    "id": "pack-001",
+    "name": "Neón Tokio",
+    "description": "24 retratos estilo anime cyberpunk, paleta neón y lluvia urbana. Ideal para avatares y portadas.",
+    "tags": ["anime", "cyberpunk"],
+    "image": "https://images.unsplash.com/photo-1615751072497-5f5169febe17?q=80&w=800&auto=format&fit=crop",
+    "purchaseLink": "https://tu-tienda.com/pack-neon-tokio",
+    "sampleLink": "https://tu-tienda.com/muestras/pack-neon-tokio"
+  },
+  {
+    "id": "pack-002",
+    "name": "Retratos Clásicos",
+    "description": "18 retratos hiperrealistas de estudio, iluminación cinematográfica. Alta resolución.",
+    "tags": ["realista", "retrato"],
+    "image": "https://images.unsplash.com/photo-1544005313-94ddf0286df2?q=80&w=800&auto=format&fit=crop",
+    "purchaseLink": "https://tu-tienda.com/pack-retratos-clasicos",
+    "sampleLink": "https://tu-tienda.com/muestras/pack-retratos-clasicos"
+  },
+  {
+    "id": "pack-003",
+    "name": "Reinos Perdidos",
+    "description": "30 escenas de fantasía épica: castillos, criaturas y paisajes. Estilo pintura digital.",
+    "tags": ["fantasia", "realista"],
+    "image": "https://images.unsplash.com/photo-1518709268805-4e9042af2176?q=80&w=800&auto=format&fit=crop",
+    "purchaseLink": "https://tu-tienda.com/pack-reinos-perdidos",
+    "sampleLink": "https://tu-tienda.com/muestras/pack-reinos-perdidos"
+  }
+]

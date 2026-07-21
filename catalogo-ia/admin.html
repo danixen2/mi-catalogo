@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Panel Admin — Catálogo</title>
+<meta name="robots" content="noindex, nofollow">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:wght@500;600&family=Inter:wght@400;500;600&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="assets/style.css">
+<link rel="stylesheet" href="assets/admin.css">
+</head>
+<body>
+
+<div class="admin-wrap">
+  <h1>Panel del catálogo</h1>
+  <p class="lede">Esta página es privada — no está enlazada desde tu catálogo público ni indexada. No compartas este link.</p>
+
+  <div id="status" class="status hidden"></div>
+
+  <div class="panel">
+    <h2>Conexión con GitHub</h2>
+    <form id="cfg-form">
+      <div class="row2">
+        <div class="field"><label>Usuario u organización de GitHub</label><input id="cfg-owner" required placeholder="tu-usuario"></div>
+        <div class="field"><label>Nombre del repositorio</label><input id="cfg-repo" required placeholder="mi-catalogo"></div>
+      </div>
+      <div class="row2">
+        <div class="field"><label>Rama</label><input id="cfg-branch" value="main"></div>
+        <div class="field"><label>Ruta del archivo</label><input id="cfg-path" value="products.json"></div>
+      </div>
+      <div class="field">
+        <label>Token de acceso personal (fine-grained)</label>
+        <input id="cfg-token" type="password" required placeholder="github_pat_...">
+        <small class="help">Creá uno en GitHub → Settings → Developer settings → Fine-grained tokens. Dale permiso "Contents: Read and write" solo sobre este repositorio. Se guarda únicamente en tu navegador, nunca se envía a ningún otro lado.</small>
+      </div>
+      <button class="btn-solid" type="submit">Conectar</button>
+      <button class="btn-outline" type="button" id="cfg-forget" style="margin-left:8px;">Olvidar datos guardados</button>
+    </form>
+  </div>
+
+  <div id="editor-panel" class="hidden">
+    <div class="panel">
+      <h2>Agregar nuevo pack</h2>
+      <form id="add-form">
+        <div class="field"><label>Nombre</label><input id="new-name" required></div>
+        <div class="field"><label>Descripción</label><textarea id="new-desc"></textarea></div>
+        <div class="field"><label>Tags (separados por coma)</label><input id="new-tags" placeholder="anime, cyberpunk"></div>
+        <div class="field"><label>URL de imagen</label><input id="new-image" placeholder="https://..."></div>
+        <div class="row2">
+          <div class="field"><label>Link de compra</label><input id="new-purchase" placeholder="https://..."></div>
+          <div class="field"><label>Link de muestra gratis</label><input id="new-sample" placeholder="https://..."></div>
+        </div>
+        <button class="btn-solid" type="submit">Agregar a la lista</button>
+      </form>
+    </div>
+
+    <div class="panel">
+      <h2>Packs actuales</h2>
+      <div id="product-list"></div>
+    </div>
+
+    <div class="panel" style="display:flex; gap:10px; align-items:center;">
+      <button class="btn-solid" id="save-btn">Guardar cambios en GitHub</button>
+      <button class="btn-outline" id="reload-btn">Recargar desde GitHub</button>
+    </div>
+  </div>
+</div>
+
+<script src="assets/admin.js"></script>
+</body>
+</html>
